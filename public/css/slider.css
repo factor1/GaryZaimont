@@ -1,0 +1,87 @@
+/*
+    anythingSlider v1.2
+    
+    By Chris Coyier: http://css-tricks.com
+    with major improvements by Doug Neiner: http://pixelgraphics.us/
+    based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+
+.anythingSlider  { 
+	width: 986px; 
+	height: 800px; 
+	position: relative; 
+	margin: 0px auto; }
+	
+.anythingSlider .wrapper    { 
+	width: 986px; 
+	overflow: auto; 
+	height: 800px; 
+	margin: 0; 
+	position: absolute; 
+	top: 0; left: 0; }
+
+
+.anythingSlider .wrapper ul    {
+	width: 32700px; 
+	list-style: none; 
+	position: absolute; 
+	top: 0; left: -40px; 
+	margin: 0; }
+
+.anythingSlider ul li  { 
+	display: block; 
+	float: left; padding: 0; 
+	height: 800px; 
+	width: 986px; 
+	margin: 0; }
+
+
+.anythingSlider .arrow                  { display: block; height: 14px; width: 15px; background: url(../images/arrows.jpg) no-repeat 0 0; text-indent: -9999px; position: absolute; top: -20px; cursor: pointer; }
+.anythingSlider .forward                { background-position: -15px 0; left: 16px; }
+.anythingSlider .back                   { background-position: 0px 0px; left: 0px; }
+
+
+#thumbNav  { 
+	position: relative; 
+	top: -40px; 
+	text-align: left; }
+	
+#thumbNav a    { 
+	color: black; 
+	background: #989a9c;
+	font-size: 0.8em;
+	display: inline-block; 
+	height: 14px;
+	width: 14px; 
+	margin: 0 2px 0 0; 
+	text-align: left; 
+	text-decoration: none;
+	text-indent: -5000px;
+	}
+
+#thumbNav a.cur                         { background: #3f4041;}
+
+
+#start-stop  { 
+	color: #333; 
+	width: 20px;
+	height: 20px;
+	font-size: 0.8em; 
+	position: absolute; 
+	text-decoration: none;
+	right: 2px; top: -407px;
+	text-indent: -5000px;  
+	background: #989a9c;
+	}
+	
+#start-stop.playing                     { color: #777; text-decoration: none; background: url(../sliderimages/pause.png) }
+#start-stop.stopped                     { color: #777; text-decoration: none; background: url(../sliderimages/play.png) }
+
+
+
+/*
+  Prevents
+*/
+.anythingSlider .wrapper ul ul          { position: static; margin: 0; background: none; overflow: visible; width: auto; border: 0; }
+.anythingSlider .wrapper ul ul li       { float: none; height: auto; width: auto; background: none; }

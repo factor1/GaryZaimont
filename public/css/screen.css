@@ -1,0 +1,316 @@
+/***** Global Settings *****/
+
+html, body {
+border:0;
+margin:0;
+padding:0;
+}
+
+body {
+font:100%/1.25 Tahoma, Verdana, helvetica, arial, sans-serif;
+/* header.png (dark gradient band) disabled to match the long-standing live look */
+background: #a8a9ad;
+}
+
+/***** Common Formatting *****/
+
+h1, h2, h3, h4, h5, h6 {
+margin:0;
+padding:0;
+font-weight:bold;
+}
+
+h1 {
+font-variant: small-caps;
+font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+padding:0px 0 25px 0;
+letter-spacing:-1px;
+font:3em;
+}
+
+h2 {
+padding:20px 0;
+letter-spacing:-1px;
+font:2em arial, helvetica, sans-serif;
+}
+
+h3 {
+font:1.5em arial, helvetica, sans-serif;
+font-weight:bold;
+}
+
+p, ul, ol {
+margin:0;
+padding:0 0 18px 0;
+}
+
+p {
+font-size: 1.15em;
+text-indent:25px;}
+
+ul, ol {
+list-style:none;
+padding:0 0 18px 40px;
+}
+
+blockquote {
+margin:22px 40px;
+padding:0;
+}
+
+small {
+font-size:0.85em;
+}
+
+img {
+border:0;
+}
+
+sup {
+position:relative;
+bottom:0.3em;
+vertical-align:baseline;
+}
+
+sub {
+position:relative;
+bottom:-0.2em;
+vertical-align:baseline;
+}
+
+acronym, abbr {
+cursor:help;
+letter-spacing:1px;
+border-bottom:1px dashed;
+}
+
+/***** Links *****/
+
+a, a:visited {
+text-decoration:none;
+}
+
+/***** Forms *****/
+
+form {
+margin:0;
+padding:0;
+display:inline;
+}
+
+input, select, textarea {
+font:1em arial, helvetica, sans-serif;
+}
+
+textarea {
+line-height:1.25;
+}
+
+label {
+cursor:pointer;
+}
+
+/***** Tables *****/
+
+table {
+border:0;
+margin:0 0 18px 0;
+padding:0;
+}
+
+	table tr td {
+	padding:2px;
+	}
+
+/***** Wrapper *****/
+
+#wrapper {
+width:988px;
+padding: 0 20px;
+margin:0 auto;
+}
+
+/***** Header *****/
+
+#header {
+	height: 160px;}
+	
+	#header h1 {
+		display: block;
+		width: 500px;
+		height: 80px;
+		text-indent: -5000px;
+		margin: 30px 0 0 0;
+		float: left;
+		}
+		
+		#header h1 a {
+			background: url(../images/logo.png) no-repeat;
+			display: block;
+			height: 80px;
+			width: 557px;
+			}
+
+/***** Navigation *****/
+
+#header ul {
+	float: right;
+	width: 455px;
+	margin: 66px 0 0 0; padding: 0;
+	text-align: right;
+	}
+	
+	#header ul li {
+		list-style: none;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		float: left;}
+		
+		#header ul li a {
+			padding: 5px 5px;
+			margin: 0 5px;
+			color: #ccc;
+			text-transform: uppercase;
+			font-size: 0.9em;
+			text-decoration: none;
+			}
+			
+
+/***** Home *****/
+#splash {
+	margin: 0 auto;
+	width: 938px; }
+
+/***** Table of contents *****/
+
+#works {}
+
+#dancerleft {
+	width: 210px;
+	float: left;
+	margin: 0 80px 0 70px;}
+	
+#contents {
+	float: left;
+	width: 240px;}
+	
+	#contents.wide {
+	width: 540px;}
+	
+	#contents h1 a{color: #000;}
+	
+#worksnav, #workssubnav {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;}
+	
+	#worksnav li, #workssubnav li {
+		list-style: none;
+		color: #000;
+		font-size: 1.5em;
+		padding: 0px 0 30px 0;
+		}
+		
+		#workssubnav li {padding: 0 0 10px 0;}
+		
+		#worksnav li a, #worksnav li a:visited {color: #000;}
+	
+	#worksnav li ul {
+		margin: 15px 0 -10px 0;
+		padding: 0;}	
+	
+	#worksnav li li {
+		margin: 0 0 0 30px;
+		padding: 0 0 18px 0;
+		font-size: 0.9em;
+		color: #fff;}
+			
+		#worksnav li li a, #worksnav li li a:visited, #workssubnav li a, #workssubnav li a:visited {color: #fff;}
+		#workssubnav li a {font-size: 0.8em; padding: 0 0 10px 0; margin: 0 0 0 0;}
+	
+
+#thumbright {float: left; height: 450px;}
+
+
+/***** Portfolios *****/
+
+h1.portfolio {
+	text-align: right;
+	font-size: 3.2em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;}
+
+/***** Biography *****/
+
+
+#biography {font-family: Garamond, Georgia, "Times New Roman", Times, serif;}
+
+#biography h2 {
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;
+	padding:0px 0 10px 0;
+	font-size:1.5em;
+	font-style: italic;
+	text-decoration: underline;
+	}
+	
+	#biography p {text-indent:0px;}
+	
+	dt, dd {font-size: 1.2em; }
+	
+	dt {
+		padding: 4px 0 0 0;}
+
+/***** Statement *****/
+
+#statement {
+	width: 800px;
+	margin: 0 auto;
+	font-family: Garamond, Georgia, "Times New Roman", Times, serif;}
+
+/***** Studio *****/
+
+/***** footer *****/
+
+#footer {
+	margin: 15px 0;
+	border-top: 1px solid #888;
+	padding: 5px;
+	color: #333;
+	font-size: 0.8em;
+	}
+	
+	#footer a, #footer a:visited {color: #333;}
+	
+.copyright {
+	float: left;}
+	
+.credit {
+	float: right;}
+	
+	
+
+
+/***** Global Classes *****/
+
+.clear 			{ clear:both; }
+
+.float-left 	{ float:left; }
+.float-right 	{ float:right; }
+
+.text-left 		{ text-align:left; }
+.text-right 	{ text-align:right; }
+.text-center 	{ text-align:center; }
+.text-justify 	{ text-align:justify; }
+
+.bold 			{ font-weight:bold; }
+.italic 		{ font-style:italic; }
+.underline 		{ border-bottom:1px solid; }
+.highlight 		{ background:#ffc; }
+
+.wrap 			{ width:960px;margin:0 auto; }
+
+.img-left 		{ float:left;margin:4px 10px 4px 0; }
+.img-right 		{ float:right;margin:4px 0 4px 10px; }
+
+.nopadding 		{ padding:0; }
+.noindent 		{ margin-left:0;padding-left:0; }
+.nobullet 		{ list-style:none;list-style-image:none; }

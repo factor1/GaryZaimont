@@ -1,0 +1,160 @@
+# Netlify config for garyzaimont.com
+# Pure static site: no build step. Netlify publishes /public as-is.
+
+[build]
+  publish = "public"
+  command = ""
+
+# ---- Legacy URL redirects (301) --------------------------------------------
+# The old PHP site answered at both /page and /page.php. Clean URLs are now
+# served from /page/index.html; .php URLs 301 to them to keep any inbound links.
+
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/catalog.php"
+  to = "/catalog/"
+  status = 301
+
+[[redirects]]
+  from = "/bio.php"
+  to = "/bio/"
+  status = 301
+
+[[redirects]]
+  from = "/statement.php"
+  to = "/statement/"
+  status = 301
+
+[[redirects]]
+  from = "/studio.php"
+  to = "/studio/"
+  status = 301
+
+[[redirects]]
+  from = "/dancers.php"
+  to = "/dancers/"
+  status = 301
+
+[[redirects]]
+  from = "/animals.php"
+  to = "/animals/"
+  status = 301
+
+[[redirects]]
+  from = "/people.php"
+  to = "/people/"
+  status = 301
+
+[[redirects]]
+  from = "/abstracts.php"
+  to = "/abstracts/"
+  status = 301
+
+[[redirects]]
+  from = "/videos.php"
+  to = "/videos/"
+  status = 301
+
+[[redirects]]
+  from = "/works/dancers.php"
+  to = "/works/dancers/"
+  status = 301
+
+[[redirects]]
+  from = "/works/animals.php"
+  to = "/works/animals/"
+  status = 301
+
+[[redirects]]
+  from = "/works/people.php"
+  to = "/works/people/"
+  status = 301
+
+[[redirects]]
+  from = "/works/abstract.php"
+  to = "/works/abstract/"
+  status = 301
+
+[[redirects]]
+  from = "/works/sets.php"
+  to = "/works/sets/"
+  status = 301
+
+[[redirects]]
+  from = "/works/trees.php"
+  to = "/works/trees/"
+  status = 301
+
+[[redirects]]
+  from = "/works/video-dance.php"
+  to = "/works/video-dance/"
+  status = 301
+
+[[redirects]]
+  from = "/works/video-beasts.php"
+  to = "/works/video-beasts/"
+  status = 301
+
+[[redirects]]
+  from = "/works/abstracts"
+  to = "/works/abstract/"
+  status = 301
+
+[[redirects]]
+  from = "/works/abstracts/"
+  to = "/works/abstract/"
+  status = 301
+
+[[redirects]]
+  from = "/works/videos"
+  to = "/videos/"
+  status = 301
+
+[[redirects]]
+  from = "/works/videos/"
+  to = "/videos/"
+  status = 301
+
+[[redirects]]
+  from = "/works/dance.flv"
+  to = "/media/dance.mp4"
+  status = 301
+
+[[redirects]]
+  from = "/works/beasts.flv"
+  to = "/media/beasts.mp4"
+  status = 301
+
+# Any other *.php request (incl. URLs from the 2026 spam injection) gets a real 404
+# so search engines drop them. Unknown paths fall through to /404.html automatically.
+[[redirects]]
+  from = "/*.php"
+  to = "/404.html"
+  status = 404
+
+# ---- Headers ----------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/works/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
